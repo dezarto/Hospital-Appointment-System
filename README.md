@@ -1,17 +1,32 @@
 # Hospital Reservation System (HRS)
+## IMAGES
 
-[![image1](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image1.png?raw=true)]
-[![image2](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image2.png?raw=true)]
-[![image3](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image3.png?raw=true)]
-[![image4](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image4.png?raw=true)]
-[![image5](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image5.png?raw=true)]
-[![image6](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image6.png?raw=true)]
-[![image7](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image7.png?raw=true)]
-[![image8](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image8.png?raw=true)]
-[![image9](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image9.png?raw=true)]
-[![image10](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image10.png?raw=true)]
-[![imagea1](https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/a1.png?raw=true)]
-
+<table>
+  <tr>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image1.png?raw=true" alt="image1" width="300" style="margin-right:10px;" /></td>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image2.png?raw=true" alt="image2" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image3.png?raw=true" alt="image3" width="300" style="margin-right:10px;" /></td>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image4.png?raw=true" alt="image4" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image5.png?raw=true" alt="image5" width="300" style="margin-right:10px;" /></td>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image6.png?raw=true" alt="image6" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image7.png?raw=true" alt="image7" width="300" style="margin-right:10px;" /></td>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image8.png?raw=true" alt="image8" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image9.png?raw=true" alt="image9" width="300" style="margin-right:10px;" /></td>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/image10.png?raw=true" alt="image10" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/dezarto/Hospital-Appointment-System/blob/main/images/a1.png?raw=true" alt="a1" width="300" style="margin-right:10px;" /></td>
+    <td></td>
+  </tr>
+</table>
 
 [TÜRKÇE]
 
