@@ -1,0 +1,331 @@
+:root {
+    --sidebar-bg: #2d2d2d;
+    --border-color: #404040;
+    --text-color: #fff;
+    --text-secondary: #e0e0e0;
+    --edit-btn-bg: #4CAF50;
+    --contact-btn-bg: #2196F3;
+    --address-btn-bg: #FF9800;
+    --about-btn-bg: #9C27B0;
+    --news-btn-bg: #F44336;
+    --announcement-btn-bg: #3F51B5;
+    --event-btn-bg: #FFC107;
+    --slider-btn-bg: #009688;
+    --bolumler-btn-bg: #E91E63;
+    --doktorlar-btn-bg: #607D8B;
+    --randevular-btn-bg: #8BC34A;
+    --delete-btn-bg: #D32F2F;
+}
+
+.action-buttons-sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    color: var(--text-color);
+    border-right: 1px solid var(--border-color);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-buttons-sidebar-title {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.action-buttons-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-buttons-sidebar-no-hospital {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.action-buttons-sidebar-action-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.action-buttons-sidebar-action-btn:hover {
+    transform: translateX(5px);
+    opacity: 0.9;
+}
+
+.sidebar-btn {
+    font-weight: 500;
+}
+
+.edit-btn {
+    background-color: var(--edit-btn-bg);
+}
+
+.edit-btn:hover {
+    background-color: #388E3C;
+}
+
+.contact-btn {
+    background-color: var(--contact-btn-bg);
+}
+
+.contact-btn:hover {
+    background-color: #1976D2;
+}
+
+.address-btn {
+    background-color: var(--address-btn-bg);
+}
+
+.address-btn:hover {
+    background-color: #F57C00;
+}
+
+.about-btn {
+    background-color: var(--about-btn-bg);
+}
+
+.about-btn:hover {
+    background-color: #7B1FA2;
+}
+
+.news-btn {
+    background-color: var(--news-btn-bg);
+}
+
+.news-btn:hover {
+    background-color: #D32F2F;
+}
+
+.announcement-btn {
+    background-color: var(--announcement-btn-bg);
+}
+
+.announcement-btn:hover {
+    background-color: #303F9F;
+}
+
+.event-btn {
+    background-color: var(--event-btn-bg);
+}
+
+.event-btn:hover {
+    background-color: #FFA000;
+}
+
+.slider-btn {
+    background-color: var(--slider-btn-bg);
+}
+
+.slider-btn:hover {
+    background-color: #00796B;
+}
+
+.bolumler-btn {
+    background-color: var(--bolumler-btn-bg);
+}
+
+.bolumler-btn:hover {
+    background-color: #C2185B;
+}
+
+.doktorlar-btn {
+    background-color: var(--doktorlar-btn-bg);
+}
+
+.doktorlar-btn:hover {
+    background-color: #455A64;
+}
+
+.randevular-btn {
+    background-color: var(--randevular-btn-bg);
+}
+
+.randevular-btn:hover {
+    background-color: #689F38;
+}
+
+.delete-btn {
+    background-color: var(--delete-btn-bg);
+}
+
+.delete-btn:hover {
+    background-color: #B71C1C;
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal,
+.confirmation-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #404040;
+    position: sticky;
+    top: 0;
+    background: #2d2d2d;
+    z-index: 1;
+}
+
+.modal-header h2,
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(90vh - 120px);
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #404040;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.form-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.form-column {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    background: #3d3d3d;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #404040;
+}
+
+.confirm-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.confirm-btn:hover {
+    background: #45a049;
+}
+
+.cancel-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background: #d32f2f;
+}

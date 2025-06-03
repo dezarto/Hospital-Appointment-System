@@ -1,0 +1,294 @@
+.rdv-randevu-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 90vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.rdv-randevu-left {
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.rdv-randevu-button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+    min-height: 160px;
+}
+
+.rdv-randevu-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+}
+
+.rdv-hospital-icon {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.rdv-randevu-button:hover .rdv-hospital-icon {
+    transform: scale(1.1);
+}
+
+.rdv-randevu-text h3 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.rdv-randevu-text p {
+    margin: 0.75rem 0 0;
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+/* Right panel with improved table styling */
+.rdv-randevu-right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.rdv-randev-table {
+    background: #a0d6cf;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rdv-randevu-table h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #007bff;
+}
+
+/* Appointment list with smoother grid */
+.rdv-appointments-list {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.rdv-appointment-card {
+    background: linear-gradient(180deg, #7eb1b3 0%, #6a9a9c 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.rdv-appointment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rdv-appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+}
+
+.rdv-appointment-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.rdv-status-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.rdv-status-badge.rdv-upcoming {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.rdv-status-badge.rdv-completed {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.rdv-status-badge:hover {
+    transform: scale(1.05);
+}
+
+.rdv-appointment-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.rdv-detail-column {
+    display: grid;
+    gap: 1rem;
+}
+
+.rdv-time-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 2px solid rgba(240, 240, 240, 0.7);
+    padding-left: 1.5rem;
+}
+
+.rdv-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #182027;
+    font-size: 1rem;
+    background: #608c96;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.rdv-detail-item:hover {
+    background: #517b84;
+}
+
+.rdv-detail-item .rdv-icon {
+    color: #00e1ff;
+    min-width: 24px;
+    font-size: 1.25rem;
+    transition: transform 0.2s ease;
+}
+
+.rdv-detail-item:hover .rdv-icon {
+    transform: scale(1.1);
+}
+
+.rdv-appointment-card.rdv-upcoming {
+    border-color: #2196f3;
+}
+
+.rdv-appointment-card.rdv-completed {
+    border-color: #4caf50;
+}
+
+/* No appointments state */
+.rdv-no-appointments {
+    text-align: center;
+    padding: 2.5rem;
+    background: #d4e9ff;
+    border-radius: 12px;
+    color: #4e4e4e;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Loading state */
+.rdv-checking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    background: #a0d6cf;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rdv-loading-alert-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.rdv-loading-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .rdv-randevu-container {
+        flex-direction: column;
+    }
+
+    .rdv-randevu-left,
+    .rdv-randevu-right {
+        width: 100%;
+    }
+
+    .rdv-randevu-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .rdv-appointment-details {
+        grid-template-columns: 1fr;
+    }
+
+    .rdv-time-column {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 1.5rem;
+        border-top: 2px solid rgba(240, 240, 240, 0.7);
+    }
+
+    .rdv-status-badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .rdv-detail-item {
+        font-size: 0.9rem;
+    }
+
+    .rdv-randevu-button {
+        padding: 1.5rem;
+    }
+
+    .rdv-hospital-icon {
+        font-size: 2rem;
+    }
+
+    .rdv-randevu-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .rdv-randevu-text p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,320 @@
+:root {
+    --background-color: #302f2f;
+    --table-bg: #2d2d2d;
+    --table-header-bg: #404040;
+    --border-color: #404040;
+    --hover-bg: #3d3d3d;
+    --selected-bg: #4a4a4a;
+    --text-color: #fff;
+    --text-secondary: #e0e0e0;
+    --scrollbar-track: #404040;
+    --scrollbar-thumb: #666;
+    --scrollbar-thumb-hover: #888;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+.home-hastane-main-container {
+    display: flex;
+    min-height: 100vh;
+    margin-left: 20px;
+}
+
+.home-hastane-table-container {
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.home-hastane-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    background-color: var(--table-bg);
+    color: var(--text-color);
+}
+
+.home-hastane-table th,
+.home-hastane-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.home-hastane-table th {
+    background-color: var(--table-header-bg);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.home-hastane-table tr:hover {
+    background-color: var(--hover-bg);
+    cursor: pointer;
+}
+
+.home-hastane-table tr.home-hastane-selected {
+    background-color: var(--selected-bg);
+}
+
+.home-hastane-table td:last-child {
+    text-align: center;
+    /* Center actions column */
+}
+
+.home-hastane-add-button {
+    margin-bottom: 20px;
+    background-color: var(--table-header-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.home-hastane-add-button:hover {
+    background-color: #575757;
+}
+
+.home-hastane-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.home-hastane-modal {
+    background: var(--table-bg);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.home-hastane-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--table-bg);
+    z-index: 1;
+}
+
+.home-hastane-modal-header h2,
+.home-hastane-modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.home-hastane-modal-close {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: color 0.2s;
+}
+
+.home-hastane-modal-close:hover {
+    color: var(--text-secondary);
+}
+
+.home-hastane-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(90vh - 140px);
+}
+
+.home-hastane-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.home-hastane-modal-content::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+.home-hastane-modal-content::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+.home-hastane-modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.home-hastane-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.home-hastane-modal-confirm,
+.home-hastane-modal-cancel {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.home-hastane-modal-confirm {
+    background-color: #4CAF50;
+    color: var(--text-color);
+}
+
+.home-hastane-modal-cancel {
+    background-color: #f44336;
+    color: var(--text-color);
+}
+
+.home-hastane-modal-confirm:hover {
+    background-color: #45a049;
+}
+
+.home-hastane-modal-cancel:hover {
+    background-color: #da190b;
+}
+
+.home-hastane-form-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.home-hastane-form-column {
+    flex: 1;
+}
+
+.home-hastane-form-group {
+    margin-bottom: 15px;
+}
+
+.home-hastane-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.home-hastane-form-group input,
+.home-hastane-form-group textarea,
+.home-hastane-form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--hover-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.home-hastane-form-group input:focus,
+.home-hastane-form-group textarea:focus,
+.home-hastane-form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.home-hastane-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.home-hastane-input-group>* {
+    flex: 1;
+}
+
+.home-hastane-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+}
+
+.home-hastane-loading-overlay {
+    margin: 0 auto;
+}
+
+.home-hastane-loading-message {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* ActionButtonsSidebar button styles */
+.home-hastane-edit-btn,
+.home-hastane-contact-btn,
+.home-hastane-address-btn,
+.home-hastane-about-btn,
+.home-hastane-news-btn,
+.home-hastane-announcement-btn,
+.home-hastane-event-btn,
+.home-hastane-slider-btn,
+.home-hastane-bolumler-btn,
+.home-hastane-doktorlar-btn,
+.home-hastane-randevular-btn,
+.home-hastane-delete-btn {
+    background-color: #f44336;
+    /* Matches sidebar delete button */
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    /* Smaller padding for table */
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+    /* Smaller font for table */
+}
+
+.home-hastane-edit-btn:hover,
+.home-hastane-contact-btn:hover,
+.home-hastane-address-btn:hover,
+.home-hastane-about-btn:hover,
+.home-hastane-news-btn:hover,
+.home-hastane-announcement-btn:hover,
+.home-hastane-event-btn:hover,
+.home-hastane-slider-btn:hover,
+.home-hastane-bolumler-btn:hover,
+.home-hastane-doktorlar-btn:hover,
+.home-hastane-randevular-btn:hover,
+.home-hastane-delete-btn:hover {
+    opacity: 0.9;
+}

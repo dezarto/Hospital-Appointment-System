@@ -1,0 +1,313 @@
+:root {
+  --mavi-ana: #2B4D8C;
+  --mavi-acik: #3498db;
+  --mavi-koyu: #1E3A6A;
+  /* Sarı yerine koyu mavi ton */
+}
+
+.rda-randevu-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(145deg, #507eac 80%, var(--mavi-koyu) 100%);
+  /* Sarı yerine mavi-koyu */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.rda-form-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.rda-input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.rda-input-group label {
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #507eac;
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--mavi-ana);
+  transition: all 0.3s ease;
+}
+
+.rda-input-group select {
+  padding: 1rem;
+  border: 2px solid var(--mavi-ana);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgb(52, 131, 168);
+  transition: all 0.3s ease;
+  appearance: none;
+  cursor: pointer;
+}
+
+.rda-input-group select:focus {
+  border-color: var(--mavi-acik);
+  /* Sarı yerine mavi-acik */
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+  /* Sarı yerine mavi-acik */
+  outline: none;
+}
+
+.rda-input-group select:not(:placeholder-shown)+label,
+.rda-input-group select:focus+label {
+  top: -0.5rem;
+  font-size: 0.85rem;
+}
+
+.rda-button-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.rda-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.rda-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rda-search-btn {
+  background: linear-gradient(135deg, var(--mavi-ana) 0%, var(--mavi-acik) 100%);
+  color: white;
+}
+
+.rda-clear-btn {
+  background: linear-gradient(135deg, var(--mavi-koyu) 0%, var(--mavi-acik) 100%);
+  /* Sarı yerine mavi tonları */
+  color: white;
+  /* Mavi tonlarla uyumlu olması için renk değişti */
+}
+
+.rda-icon {
+  font-size: 1.2rem;
+}
+
+.rda-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.rda-randevu-popup {
+  background: rgb(167, 174, 235);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--mavi-acik);
+  /* Sarı yerine mavi-acik */
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rda-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rda-popup-header h3 {
+  color: var(--mavi-ana);
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.rda-close-icon {
+  color: var(--mavi-ana);
+  font-size: 1.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rda-close-icon:hover {
+  color: var(--mavi-acik);
+  /* Sarı yerine mavi-acik */
+  transform: rotate(90deg);
+}
+
+.rda-mesai-listesi {
+  display: grid;
+  gap: 1.2rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.rda-mesai-item {
+  padding: 1.5rem;
+  border: 2px solid var(--mavi-ana);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.rda-mesai-item:hover {
+  border-color: var(--mavi-acik);
+  /* Sarı yerine mavi-acik */
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rda-mesai-item.rda-selected {
+  border-color: var(--mavi-acik);
+  /* Sarı yerine mavi-acik */
+  background: linear-gradient(135deg, #e6f0ff 0%, #fff 100%);
+  /* Sarı yerine mavi tonlu gradient */
+}
+
+.rda-tarih {
+  color: var(--mavi-ana);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.rda-saat {
+  color: var(--mavi-koyu);
+  /* Sarı yerine mavi-koyu */
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.rda-onayla-btn {
+  background: linear-gradient(135deg, var(--mavi-koyu) 0%, var(--mavi-acik) 100%);
+  /* Sarı yerine mavi tonları */
+  color: white;
+  /* Mavi tonlarla uyumlu olması için renk değişti */
+  padding: 1.2rem 2.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.rda-onayla-btn:hover {
+  background: linear-gradient(135deg, var(--mavi-ana) 0%, var(--mavi-acik) 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rda-checking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background: linear-gradient(145deg, #507eac 80%, var(--mavi-koyu) 100%);
+  /* Sarı yerine mavi-koyu */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin: 2rem;
+}
+
+.rda-loading-alert-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.rda-loading-message {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--mavi-ana);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .rda-randevu-container {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .rda-form-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .rda-button-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rda-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rda-randevu-popup {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .rda-popup-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .rda-mesai-item {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .rda-tarih,
+  .rda-saat {
+    font-size: 1rem;
+  }
+}

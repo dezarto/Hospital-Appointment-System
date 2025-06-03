@@ -1,0 +1,381 @@
+:root {
+    background-color: #302f2f;
+}
+
+.haberler-main-container {
+    display: flex;
+    min-height: 100vh;
+    background: #302f2f;
+}
+
+.haberler-table-container {
+    flex: 1;
+    margin-left: 270px;
+    padding: 20px;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+}
+
+.haberler-add-new-btn {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    align-self: flex-end;
+    transition: background 0.2s;
+}
+
+.haberler-add-new-btn:hover {
+    background: #45a049;
+}
+
+.haberler-hasta-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    table-layout: fixed;
+}
+
+.haberler-hasta-table th,
+.haberler-hasta-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #404040;
+    color: #e0e0e0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+}
+
+.haberler-hasta-table th:nth-child(1),
+.haberler-hasta-table td:nth-child(1) {
+    width: 3%;
+}
+
+.haberler-hasta-table th:nth-child(2),
+.haberler-hasta-table td:nth-child(2) {
+    width: 20%;
+}
+
+.haberler-hasta-table th:nth-child(3),
+.haberler-hasta-table td:nth-child(3) {
+    width: 50%;
+}
+
+.haberler-hasta-table th:nth-child(4),
+.haberler-hasta-table td:nth-child(4) {
+    width: 10%;
+}
+
+.haberler-hasta-table th:nth-child(5),
+.haberler-hasta-table td:nth-child(5) {
+    width: 15%;
+}
+
+.haberler-hasta-table th:nth-child(6),
+.haberler-hasta-table td:nth-child(6) {
+    width: 10%;
+}
+
+.haberler-hasta-table tbody tr td[colSpan="6"] {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.haberler-hasta-table th {
+    background: #3d3d3d;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.haberler-hasta-table th:hover {
+    background: #454545;
+}
+
+.haberler-hasta-table tr:hover {
+    background: #383838;
+}
+
+.haberler-hasta-table img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.haberler-actions {
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.haberler-edit-btn,
+.haberler-delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 3px;
+}
+
+.haberler-edit-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.haberler-edit-btn:hover {
+    background: #45a049;
+}
+
+.haberler-delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.haberler-delete-btn:hover {
+    background: #d32f2f;
+}
+
+.haberler-address-btn {
+    background-color: #015db3;
+}
+
+.haberler-contact-btn {
+    background-color: #b17628;
+}
+
+.haberler-about-btn {
+    background-color: #0288d1;
+}
+
+.haberler-news-btn {
+    background-color: #ff9800;
+}
+
+.haberler-announcement-btn {
+    background-color: #7b1fa2;
+}
+
+.haberler-event-btn {
+    background-color: #d81b60;
+}
+
+.haberler-slider-btn {
+    background-color: #fbc02d;
+}
+
+.haberler-bolumler-btn {
+    background-color: #388e3c;
+}
+
+.haberler-doktorlar-btn {
+    background-color: #d81b60;
+}
+
+.haberler-randevular-btn {
+    background-color: #0288d1;
+}
+
+.haberler-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.haberler-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 100vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.haberler-confirmation-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.haberler-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #404040;
+    position: sticky;
+    top: 0;
+    background: #2d2d2d;
+    z-index: 1;
+}
+
+.haberler-modal-header h2,
+.haberler-modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+}
+
+.haberler-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.haberler-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(95vh - 120px);
+}
+
+.haberler-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.haberler-modal-content::-webkit-scrollbar-track {
+    background: #404040;
+}
+
+.haberler-modal-content::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.haberler-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.haberler-form-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.haberler-form-column {
+    flex: 1;
+}
+
+.haberler-form-group {
+    margin-bottom: 15px;
+}
+
+.haberler-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.haberler-form-group input,
+.haberler-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    background: #3d3d3d;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.haberler-form-group textarea {
+    resize: vertical;
+    min-height: 200px;
+}
+
+.haberler-form-group input:focus,
+.haberler-form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.haberler-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #404040;
+}
+
+.haberler-confirm-btn,
+.haberler-cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.haberler-confirm-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.haberler-confirm-btn:hover {
+    background: #45a049;
+}
+
+.haberler-cancel-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.haberler-cancel-btn:hover {
+    background: #d32f2f;
+}
+
+.haberler-checking {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+}
+
+.haberler-loading-alert-wrapper {
+    margin: 0 auto;
+}
+
+.haberler-loading-message {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}

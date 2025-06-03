@@ -1,0 +1,346 @@
+:root {
+    background-color: #302f2f;
+}
+
+.duyuru-main-container {
+    display: flex;
+    min-height: 100vh;
+    background: #302f2f;
+}
+
+.duyuru-table-container {
+    flex: 1;
+    margin-left: 270px;
+    padding: 20px;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+}
+
+.duyuru-add-new-btn {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    align-self: flex-end;
+    transition: background 0.2s;
+}
+
+.duyuru-add-new-btn:hover {
+    background: #45a049;
+}
+
+.duyuru-hasta-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    table-layout: fixed;
+}
+
+.duyuru-hasta-table th,
+.duyuru-hasta-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #404040;
+    color: #e0e0e0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+}
+
+.duyuru-hasta-table th:nth-child(1),
+.duyuru-hasta-table td:nth-child(1) {
+    width: 3%;
+}
+
+.duyuru-hasta-table th:nth-child(2),
+.duyuru-hasta-table td:nth-child(2) {
+    width: 20%;
+}
+
+.duyuru-hasta-table th:nth-child(3),
+.duyuru-hasta-table td:nth-child(3) {
+    width: 50%;
+}
+
+.duyuru-hasta-table th:nth-child(4),
+.duyuru-hasta-table td:nth-child(4) {
+    width: 10%;
+}
+
+.duyuru-hasta-table th:nth-child(5),
+.duyuru-hasta-table td:nth-child(5) {
+    width: 15%;
+}
+
+.duyuru-hasta-table th:nth-child(6),
+.duyuru-hasta-table td:nth-child(6) {
+    width: 15%;
+    min-width: 150px;
+    text-align: center;
+}
+
+.duyuru-hasta-table tbody tr td[colSpan="6"] {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.duyuru-hasta-table th {
+    background: #3d3d3d;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.duyuru-hasta-table th:hover {
+    background: #454545;
+}
+
+.duyuru-hasta-table tr:hover {
+    background: #383838;
+}
+
+.duyuru-hasta-table img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.duyuru-actions {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.duyuru-edit-btn,
+.duyuru-delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 3px;
+}
+
+.duyuru-edit-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.duyuru-edit-btn:hover {
+    background: #45a049;
+}
+
+.duyuru-delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.duyuru-delete-btn:hover {
+    background: #d32f2f;
+}
+
+.duyuru-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.duyuru-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 95vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.duyuru-confirmation-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 95vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.duyuru-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #404040;
+    position: sticky;
+    top: 0;
+    background: #2d2d2d;
+    z-index: 1;
+}
+
+.duyuru-modal-header h2,
+.duyuru-modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+}
+
+.duyuru-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.duyuru-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(95vh - 120px);
+}
+
+.duyuru-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.duyuru-modal-content::-webkit-scrollbar-track {
+    background: #404040;
+}
+
+.duyuru-modal-content::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.duyuru-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.duyuru-form-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.duyuru-form-column {
+    flex: 1;
+}
+
+.duyuru-form-group {
+    margin-bottom: 15px;
+}
+
+.duyuru-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.duyuru-form-group input,
+.duyuru-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    background: #3d3d3d;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.duyuru-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.duyuru-form-group input:focus,
+.duyuru-form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.duyuru-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #404040;
+}
+
+.duyuru-confirm-btn,
+.duyuru-cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.duyuru-confirm-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.duyuru-confirm-btn:hover {
+    background: #45a049;
+}
+
+.duyuru-cancel-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.duyuru-cancel-btn:hover {
+    background: #d32f2f;
+}
+
+.duyuru-checking {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+}
+
+.duyuru-loading-alert-wrapper {
+    margin: 0 auto;
+}
+
+.duyuru-loading-message {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}

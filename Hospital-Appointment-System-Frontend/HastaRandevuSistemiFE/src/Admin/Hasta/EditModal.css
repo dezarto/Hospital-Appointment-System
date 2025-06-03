@@ -1,0 +1,146 @@
+.em-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.em-modal {
+  background: #2d2d2d;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.em-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #404040;
+  position: sticky;
+  top: 0;
+  background: #2d2d2d;
+  z-index: 1;
+}
+
+.em-modal-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #e0e0e0;
+}
+
+.em-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.em-modal-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.em-form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.em-form-group {
+  margin-bottom: 20px;
+}
+
+.em-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+.em-form-group input,
+.em-form-group textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  background: #404040;
+  border: 1px solid #555;
+  border-radius: 6px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.em-form-group input:focus,
+.em-form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.em-radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.em-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.em-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid #404040;
+}
+
+.em-confirm-btn,
+.em-cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.em-confirm-btn {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.em-confirm-btn:hover {
+  background: #45a049;
+}
+
+.em-cancel-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+.em-cancel-btn:hover {
+  background: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .em-form-columns {
+    grid-template-columns: 1fr;
+  }
+}

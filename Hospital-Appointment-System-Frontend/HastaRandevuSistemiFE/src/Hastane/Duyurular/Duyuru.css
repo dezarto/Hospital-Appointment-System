@@ -1,0 +1,220 @@
+.duyuru-container {
+  padding: 2rem;
+  background-color: #00aedc;
+}
+
+.duyuru-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.duyuru-card {
+  background: linear-gradient(145deg, #007bff, #0062cc);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  min-height: 150px;
+}
+
+.duyuru-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.duyuru-image {
+  flex: 0 0 40%;
+  position: relative;
+  overflow: hidden;
+}
+
+.duyuru-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.duyuru-card:hover .duyuru-image img {
+  transform: scale(1.05);
+}
+
+.duyuru-info {
+  flex: 1;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.duyuru-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.duyuru-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.duyuru-date::before {
+  content: '📅';
+  font-size: 0.9rem;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.popup-content {
+  background: rgb(116, 152, 219);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  animation: popupOpen 0.3s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.popup-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+@keyframes popupOpen {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup h2 {
+  color: #2d2d2d;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  padding-right: 30px;
+}
+
+.popup-date {
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.popup p {
+  color: #101214;
+  line-height: 1.7;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
+.close-btn {
+  position: fixed;
+  top: 18px;
+  right: 15px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  padding: 0;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  background: #cc0000;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.close-btn svg {
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .duyuru-card {
+    flex-direction: column;
+  }
+
+  .duyuru-image {
+    flex: 0 0 200px;
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+  }
+
+  .popup h2 {
+    font-size: 1.4rem;
+  }
+
+  .popup-date {
+    font-size: 0.85rem;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}

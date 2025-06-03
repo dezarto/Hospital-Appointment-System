@@ -1,0 +1,29 @@
+# Build çıktıları
+bin/
+obj/
+
+# VS klasörü
+.vs/
+
+# User ayarları
+*.user
+*.suo
+
+# Test sonuçları
+TestResults/
+*.trx
+
+# Publish klasörü
+publish/
+
+# Geliştirme ortamı configleri
+appsettings.Development.json
+appsettings.Local.json
+
+# Paketler
+*.nupkg
+*.snupkg
+
+# VS Code ve Rider
+.vscode/
+.idea/

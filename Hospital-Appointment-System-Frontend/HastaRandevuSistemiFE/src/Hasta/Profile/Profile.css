@@ -1,0 +1,610 @@
+.prf-doktor-panel {
+    display: flex;
+    height: 100vh;
+}
+
+.prf-panel-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100%;
+    width: 1200px;
+}
+
+.prf-sol-menu {
+    width: 90%;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.prf-menu-item {
+    background: none;
+    border: none;
+    color: #bdc3c7;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prf-menu-item:hover {
+    background: #34495e;
+    color: white;
+}
+
+.prf-menu-item.prf-active {
+    background: #3498db;
+    color: white;
+}
+
+.prf-sag-icerik {
+    padding: 30px;
+    background: #404040;
+    overflow-y: auto;
+}
+
+.prf-bilgilerim-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.prf-bilgi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.prf-bilgi-item {
+    background: #80a1a0;
+    padding: 20px;
+    color: rgb(236, 236, 236);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.prf-bilgi-item label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.prf-bilgi-item p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.prf-menu-header h2 {
+    color: #ecf0f1;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+.prf-menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prf-doktor-bilgileri {
+    background: #5e768f;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prf-profil-baslik {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.prf-sifre-degistir-container {
+    padding: 20px;
+}
+
+.prf-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.prf-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.prf-form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.prf-form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.prf-button-group {
+    margin-top: 10px;
+}
+
+.prf-button-group button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.prf-button-group button:hover {
+    background-color: #218838;
+}
+
+.prf-edit-form {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.prf-form-section {
+    margin-bottom: 20px;
+}
+
+.prf-form-section h4 {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.prf-form-group {
+    margin-bottom: 15px;
+}
+
+.prf-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.prf-form-group input,
+.prf-form-group select {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.prf-edit-btn {
+    background: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prf-bilgi-grubu {
+    margin-bottom: 1rem;
+}
+
+.prf-bilgi-grubu label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.prf-sag-panel {
+    display: grid;
+    gap: 2rem;
+    align-content: start;
+}
+
+.prf-mesai-listesi,
+.prf-randevu-listesi {
+    background: #626d75;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prf-mesai-item,
+.prf-randevu-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: large;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.prf-mesai-item:hover {
+    background: #7290ad;
+}
+
+.prf-social-link {
+    color: #3498db;
+    text-decoration: underline;
+    word-break: break-all;
+    transition: color 0.3s;
+}
+
+.prf-social-link:hover {
+    color: #2980b9;
+}
+
+.prf-form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.prf-modal-content h4 {
+    margin: 1.5rem 0 1rem;
+    color: #3498db;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.prf-randevu-item:hover {
+    background: #7290ad;
+    cursor: pointer;
+}
+
+.prf-durum {
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.prf-durum.prf-aktif {
+    background: #2ecc71;
+    color: white;
+}
+
+.prf-durum.prf-pasif {
+    background: #e74c3c;
+    color: white;
+}
+
+.prf-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.prf-modal-content {
+    position: relative;
+    background: #53555a;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.prf-form-group {
+    margin-bottom: 1rem;
+}
+
+.prf-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.prf-form-group input {
+    width: 95%;
+    background-color: #404040;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:disabled {
+    background: #e0e0e0;
+    color: #000000;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: 1px solid #ccc;
+}
+
+.prf-button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.prf-randevu-detay .prf-detay-grup {
+    margin-bottom: 1rem;
+}
+
+.prf-kapat-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    color: #d0dcdd;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.prf-kapat-btn:hover {
+    color: #e74c3c;
+}
+
+.prf-loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.prf-bilgi-yok {
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.prf-randevu-detay-container {
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.prf-randevu-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.prf-randevu-header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prf-randevu-zaman {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.prf-tarih,
+.prf-saat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: #3498db;
+}
+
+.prf-tarih svg,
+.prf-saat svg {
+    font-size: 1.2rem;
+}
+
+.prf-randevu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.prf-info-card {
+    background: #424347;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.prf-info-card h4 {
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prf-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.prf-info-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.prf-info-item label {
+    display: block;
+    font-size: 0.9rem;
+    color: #d7e3e4;
+    margin-bottom: 0.3rem;
+}
+
+.prf-info-item p {
+    margin: 0;
+    color: #327eca;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.prf-saglik-bilgileri .prf-info-content {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.prf-bilgi-yok {
+    color: #ffffff;
+    font-style: italic;
+}
+
+.prf-randevu-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.prf-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prf-print-btn {
+    background: #3498db;
+    color: white;
+}
+
+.prf-pdf-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.prf-action-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.prf-detay-grup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.prf-detay-grup label {
+    font-weight: bold;
+    color: #eee9e9;
+    margin-bottom: 0.1rem;
+}
+
+.prf-detay-grup p {
+    margin: 0;
+    color: #c5ec38;
+}
+
+.prf-detay-grup p.prf-bilgi-yok {
+    font-style: italic;
+    color: #cac9c9;
+}
+
+.prf-randevu-detay {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.prf-modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.prf-randevu-notu {
+    margin-top: 1.5rem;
+}
+
+.prf-not-input {
+    width: 95%;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: vertical;
+    margin: 1rem 0;
+    font-family: inherit;
+}
+
+.prf-not-kaydet-btn {
+    background: #27ae60;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.prf-not-kaydet-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+.prf-not-kaydet-btn:hover:not(:disabled) {
+    background: #219a52;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .prf-randevu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prf-randevu-zaman {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .prf-randevu-actions {
+        flex-direction: column;
+    }
+
+    .prf-action-btn {
+        justify-content: center;
+    }
+
+    .prf-kapat-btn {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.2rem;
+    }
+}

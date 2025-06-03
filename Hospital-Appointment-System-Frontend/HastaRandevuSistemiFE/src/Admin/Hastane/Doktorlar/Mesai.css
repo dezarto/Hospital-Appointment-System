@@ -1,0 +1,338 @@
+:root {
+    background-color: #302f2f;
+}
+
+.mesai-main-container {
+    display: flex;
+    min-height: 100vh;
+    background: #302f2f;
+}
+
+.mesai-table-container {
+    flex: 1;
+    margin-left: 270px;
+    padding: 20px;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+}
+
+.mesai-button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.mesai-add-new-btn,
+.mesai-delete-all-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.mesai-add-new-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.mesai-add-new-btn:hover {
+    background: #45a049;
+}
+
+.mesai-delete-all-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.mesai-delete-all-btn:hover {
+    background: #d32f2f;
+}
+
+.mesai-hasta-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    table-layout: fixed;
+}
+
+.mesai-hasta-table th,
+.mesai-hasta-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #404040;
+    color: #e0e0e0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+}
+
+.mesai-hasta-table th:nth-child(1),
+.mesai-hasta-table td:nth-child(1) {
+    width: 10%;
+}
+
+.mesai-hasta-table th:nth-child(2),
+.mesai-hasta-table td:nth-child(2) {
+    width: 30%;
+}
+
+.mesai-hasta-table th:nth-child(3),
+.mesai-hasta-table td:nth-child(3) {
+    width: 25%;
+}
+
+.mesai-hasta-table th:nth-child(4),
+.mesai-hasta-table td:nth-child(4) {
+    width: 25%;
+}
+
+.mesai-hasta-table th:nth-child(5),
+.mesai-hasta-table td:nth-child(5) {
+    width: 10%;
+    min-width: 100px;
+    text-align: center;
+}
+
+.mesai-hasta-table tbody tr td[colSpan="5"] {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mesai-hasta-table th {
+    background: #3d3d3d;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mesai-hasta-table th:hover {
+    background: #454545;
+}
+
+.mesai-hasta-table tr:hover {
+    background: #383838;
+}
+
+.mesai-actions {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.mesai-delete-btn {
+    padding: 8px 12px;
+    background: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 3px;
+}
+
+.mesai-delete-btn:hover {
+    background: #d32f2f;
+}
+
+.mesai-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.mesai-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 95vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.mesai-confirmation-modal {
+    background: #2d2d2d;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 95vh;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.mesai-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #404040;
+    position: sticky;
+    top: 0;
+    background: #2d2d2d;
+    z-index: 1;
+}
+
+.mesai-modal-header h2,
+.mesai-modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+}
+
+.mesai-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.mesai-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(95vh - 120px);
+}
+
+.mesai-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mesai-modal-content::-webkit-scrollbar-track {
+    background: #404040;
+}
+
+.mesai-modal-content::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.mesai-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.mesai-form-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.mesai-form-column {
+    flex: 1;
+}
+
+.mesai-form-group {
+    margin-bottom: 15px;
+}
+
+.mesai-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.mesai-form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    background: #3d3d3d;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.mesai-form-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.mesai-form-group input[type="date"]::-webkit-calendar-picker-indicator,
+.mesai-form-group input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+}
+
+.mesai-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #404040;
+}
+
+.mesai-confirm-btn,
+.mesai-cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mesai-confirm-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.mesai-confirm-btn:hover {
+    background: #45a049;
+}
+
+.mesai-cancel-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.mesai-cancel-btn:hover {
+    background: #d32f2f;
+}
+
+.mesai-checking {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+}
+
+.mesai-loading-alert-wrapper {
+    margin: 0 auto;
+}
+
+.mesai-loading-message {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}

@@ -1,0 +1,283 @@
+:root {
+    background-color: #302f2f;
+}
+
+.il-settings-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.il-add-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.il-add-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #e0e7ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #f5f7ff;
+}
+
+.il-settings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.il-settings-table th,
+.il-settings-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.il-settings-table th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.il-settings-table tr:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.il-action-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.edit-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #f5f7ff;
+    border-color: #e0e7ff;
+}
+
+.delete-button {
+    background: rgba(255, 245, 245, 0.1);
+    border-color: rgba(255, 245, 245, 0.1);
+}
+
+.delete-button:hover {
+    background: rgba(182, 20, 20, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #f5f7ff;
+    border-color: #e6232c;
+}
+
+.add-button {
+    background: rgba(245, 255, 245, 0.1);
+    border-color: #e0e7ff;
+}
+
+.add-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #f5f7ff;
+    border-color: #e0e7ff;
+}
+
+.il-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.il-modal {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.il-modal h2 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.il-form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.il-form-group input {
+    width: 90%;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.il-form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
+.il-form-group input:focus {
+    outline: none;
+    border-color: #e0e7ff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(224, 231, 255, 0.3);
+}
+
+.il-form-group input.input-error {
+    border-color: #e6232c;
+    box-shadow: 0 0 0 3px rgba(230, 35, 44, 0.3);
+}
+
+.il-form-group .error-message {
+    color: #e6232c;
+    font-size: 12px;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+}
+
+.il-confirmation-modal {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.il-confirmation-modal p {
+    margin: 0 0 20px;
+    color: #ffffff;
+}
+
+.il-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.il-modal-actions button {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.il-modal-actions button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #f5f7ff;
+    border-color: #e0e7ff;
+}
+
+.ilce-row td {
+    padding-left: 30px !important;
+    color: #e0e7ff;
+}
+
+.ilce-row .edit-button,
+.ilce-row .delete-button {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .il-settings-container {
+        align-items: center;
+    }
+
+    .il-settings-table {
+        font-size: 14px;
+    }
+
+    .il-settings-table th,
+    .il-settings-table td {
+        padding: 8px 10px;
+    }
+
+    .il-add-button {
+        width: 100%;
+        padding: 12px;
+        max-width: 200px;
+    }
+}
+
+.checking {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.loading-message {
+    color: #e0e7ff;
+    font-size: 18px;
+}
