@@ -3,7 +3,7 @@
 [TÜRKÇE]
 
 ## Genel Bakış
-**Hastane Randevu Sistemi (HRS)**, hastane işlemlerini yönetmek için tasarlanmış kapsamlı bir ASP.NET Core Web API'sidir. Sistem, randevu yönetimi, doktor ve hasta verileri, hastane bilgileri ve idari görevleri destekler. Çoklu kullanıcı rolleri (Yönetici, Doktor, Hasta) için rol tabanlı yetkilendirme sunar ve sağlık yönetimi için sağlam bir backend ve frontend sağlar.
+**Hastane Randevu Sistemi (HRS)**, hastane işlemlerini yönetmek üzere geliştirilen, ASP.NET Core Web API ve React tabanlı bir web uygulamasıdır. Randevu yönetimi, doktor/hasta bilgileri ve idari işlemleri destekler. Yönetici, doktor ve hasta rollerine özel rol tabanlı yetkilendirme sunar ve sağlık yönetimi için güçlü bir backend ve kullanıcı dostu bir arayüz sağlar.
 
 ## Özellikler
 
@@ -93,7 +93,7 @@ Sorular veya sorunlar için lütfen GitHub'da bir sorun açın veya proje soruml
 [ENGLISH]
 
 ## Overview
-The **Hospital Reservation System (HRS)** is a comprehensive ASP.NET Core Web API designed to manage hospital-related operations, including appointments, doctor and patient data, hospital information, and administrative tasks. The system supports multiple user roles (Admin, Doctor, Patient) with role-based authorization and provides a robust backend for healthcare management.
+The **Hospital Reservation System (HRS)** is a web application developed with ASP.NET Core Web API and React to manage hospital operations. It supports appointment scheduling, doctor/patient information, and administrative tasks. It provides role-based authorization for administrators, doctors, and patients, offering a robust backend and a user-friendly interface for healthcare management.
 
 ## Features
 
